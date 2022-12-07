@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:title="@string/world_news">
+        <menu>
+            <group android:checkableBehavior="single" android:id="@+id/group1">
+                <item
+                    android:id="@+id/africa"
+                    android:title="@string/africa" />
+                <item
+                    android:id="@+id/asia"
+                    android:title="@string/asia" />
+                <item
+                    android:id="@+id/australia"
+                    android:title="@string/australia" />
+                <item
+                    android:id="@+id/middleEast"
+                    android:title="@string/middle_east" />
+                <item
+                    android:id="@+id/latinAmerica"
+                    android:title="@string/latin_america" />
+                <item
+                    android:id="@+id/usCanada"
+                    android:title="@string/us_canada" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

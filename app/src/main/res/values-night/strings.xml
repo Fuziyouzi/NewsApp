@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="world_news">World News</string>
+    <string name="topics">Topics</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="us_canada"><![CDATA[US & Canada]]></string>
+    <string name="latin_america">Latin America</string>
+    <string name="middle_east">Middle East</string>
+    <string name="australia">Australia</string>
+    <string name="asia">Asia</string>
+    <string name="africa">Africa</string>
+    <string name="business">Business</string>
+    <string name="tech">Tech</string>
+    <string name="health">Health</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="sport">Sport</string>
+    <string name="sample_text">Tesla Issues Fourth Recall in Two Months, This Time Affecting 40,000 Vehicles</string>
+    <string name="united_states">United States</string>
+    <string name="poland">Poland</string>
+    <string name="ukraine">Ukraine</string>
+    <string name="japan">Japan</string>
+    <string name="canada">Canada</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="service_is_unavailable">Service is Unavailable</string>
+    <string name="science">Science</string>
+    <string name="image_in_list_news">image in list news</string>
+    <string name="arrow_in_header">Arrow in header</string>
+</resources>

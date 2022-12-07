@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.newsapp.presenter.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment"
+        >
+        <action
+            android:id="@+id/action_mainFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_newsPageFragment"
+            app:destination="@id/newsPageFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topStoriesFragment"
+        android:name="com.example.newsapp.presenter.tabs.TopStoriesFragment"
+        android:label="TopStoriesFragment" />
+    <fragment
+        android:id="@+id/newsPageFragment"
+        android:name="com.example.newsapp.presenter.pages.NewsFragment"
+        android:label="NewsPageFragment" />
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="com.example.newsapp.presenter.topics.TopicsFragment"
+        android:label="TopicsFragment" >
+        <argument
+            android:name="topic"
+            app:argType="string"
+            android:defaultValue=" " />
+        <argument
+            android:name="country"
+            android:defaultValue=" " />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.newsapp.presenter.menu.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
