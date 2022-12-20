@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/teal_700">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/userCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:id="@+id/editCountry"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listNews"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <FrameLayout
+        android:id="@+id/chooseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="160dp"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="32dp"
+            android:text="@string/choose_your_country"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_add_circle_outline_24"
+            />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_latest_news_from_your_country_will_appear_hear"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="60dp"/>
+        <Button
+            android:id="@+id/btnChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="@string/ok_let_s_get_started"
+            android:textAllCaps="false"
+            android:textSize="16sp"/>
+    </FrameLayout>
+
+
+
+
+</FrameLayout>

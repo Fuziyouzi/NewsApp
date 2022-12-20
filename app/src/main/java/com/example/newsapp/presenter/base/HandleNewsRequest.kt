@@ -10,10 +10,12 @@ import javax.inject.Inject
 
 interface HandleNewsRequest {
 
-    fun handle(
+        fun handle(
         coroutineScope: CoroutineScope,
         block: suspend () -> NewsResult<List<NewsModel>, String>
     )
+
+
 
     fun showError(): LiveData<Event<String>>
 
@@ -37,14 +39,13 @@ class HandleNewsRequestImpl @Inject constructor(
         block: suspend () -> NewsResult<List<NewsModel>, String>
     ) {
         coroutineScope.launch(dispatcher.main) {
-            return@launch when (block.invoke()) {
+            when (block.invoke()) {
                     is NewsResult.Success -> list.publishEvent(((block.invoke() as NewsResult.Success<List<NewsModel>>).value))
                     is NewsResult.Failure -> error.publishEvent((block.invoke() as NewsResult.Failure<String>).error)
                 }
         }
         load.publishEvent(View.GONE)
     }
-
 
     override fun showError() = error.share()
 

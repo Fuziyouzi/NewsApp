@@ -7,7 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.newsapp.BaseFragment
+import com.example.newsapp.presenter.base.BaseFragment
 import com.example.newsapp.R
 import com.example.newsapp.databinding.TopicsFragmentBinding
 import com.example.newsapp.domain.models.NewsModel

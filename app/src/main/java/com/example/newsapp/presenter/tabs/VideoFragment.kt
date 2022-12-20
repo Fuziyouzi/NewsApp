@@ -1,9 +1,9 @@
 package com.example.newsapp.presenter.tabs
 
-import com.example.newsapp.BaseFragment
-import com.example.newsapp.databinding.MyNewsFragmetBinding
+import com.example.newsapp.presenter.base.BaseFragment
+import com.example.newsapp.databinding.VideoFragmentBinding
 
-class VideoFragment: BaseFragment<MyNewsFragmetBinding>(
-    MyNewsFragmetBinding::inflate
+class VideoFragment: BaseFragment<VideoFragmentBinding>(
+    VideoFragmentBinding::inflate
 ) {
 }

@@ -5,3 +5,5 @@ abstract class DomainError : IllegalStateException()
 class NoInternetConnection : DomainError()
 
 class ServiceIsUnavailable : DomainError()
+
+class StorageException : DomainError()

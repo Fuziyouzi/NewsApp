@@ -10,7 +10,7 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.newsapp.BaseFragment
+import com.example.newsapp.presenter.base.BaseFragment
 import com.example.newsapp.R
 import com.example.newsapp.core.visibility
 import com.example.newsapp.databinding.MainFragmentBinding

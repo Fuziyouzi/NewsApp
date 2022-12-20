@@ -2,7 +2,7 @@ package com.example.newsapp.presenter.menu
 
 import android.os.Bundle
 import android.view.View
-import com.example.newsapp.BaseFragment
+import com.example.newsapp.presenter.base.BaseFragment
 import com.example.newsapp.databinding.SettingFragmentBinding
 
 class SettingsFragment: BaseFragment<SettingFragmentBinding>(

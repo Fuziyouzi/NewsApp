@@ -1,6 +1,7 @@
-package com.example.newsapp.data
+package com.example.newsapp.data.cloud
 
 import com.example.newsapp.core.Dispatcher
+import com.example.newsapp.data.cloud.HandelDataRequest
 import com.example.newsapp.data.core.ErrorDataHandler
 import com.example.newsapp.data.models.NewsApiResponce
 import com.example.newsapp.domain.models.NewsModel

@@ -1,10 +1,10 @@
 package com.example.newsapp.di
 
 import com.example.newsapp.core.Dispatcher
-import com.example.newsapp.data.CloudRepository
-import com.example.newsapp.data.HandelDataRequest
-import com.example.newsapp.data.HandleDataRequestImpl
-import com.example.newsapp.data.NewsService
+import com.example.newsapp.data.cloud.CloudRepository
+import com.example.newsapp.data.cloud.HandelDataRequest
+import com.example.newsapp.data.cloud.HandleDataRequestImpl
+import com.example.newsapp.data.cloud.NewsService
 import com.example.newsapp.data.core.ErrorDataHandler
 import com.example.newsapp.data.core.ErrorDataHandlerImpl
 import dagger.Module

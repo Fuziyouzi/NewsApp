@@ -5,7 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.example.newsapp.BaseFragment
+import com.example.newsapp.presenter.base.BaseFragment
 import com.example.newsapp.R
 import com.example.newsapp.databinding.NewsFragmentBinding
 import com.example.newsapp.presenter.base.ImageLoader

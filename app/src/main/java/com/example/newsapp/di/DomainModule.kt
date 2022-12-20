@@ -2,7 +2,7 @@ package com.example.newsapp.di
 
 import com.example.newsapp.core.ManageResources
 import com.example.newsapp.core.ManageResourcesImpl
-import com.example.newsapp.data.CloudRepository
+import com.example.newsapp.data.cloud.CloudRepository
 import com.example.newsapp.domain.*
 import com.example.newsapp.domain.usecases.TopStoriesUseCase
 import com.example.newsapp.domain.usecases.TopStoriesUseCaseImpl

@@ -31,4 +31,10 @@
     <string name="space">|</string>
     <string name="image_in_list_news">image in list news</string>
     <string name="arrow_in_header">Arrow in header</string>
+    <string name="choose_your_country"><b>Choose your country </b>to create a personal list</string>
+    <string name="all_latest_news_from_your_country_will_appear_hear">All latest news from your country will appear hear.</string>
+    <string name="ok_let_s_get_started">OK, let\'s get started</string>
+    <string name="choose_country">Choose your country</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
 </resources>
