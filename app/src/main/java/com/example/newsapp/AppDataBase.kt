@@ -11,7 +11,7 @@ import com.example.newsapp.data.storage.UserNewsDbEntity
         UserNewsDbEntity::class
     ]
 )
-abstract class AppDataBase(): RoomDatabase() {
+abstract class AppDataBase: RoomDatabase() {
 
     abstract fun getUserDao(): UserDao
 }

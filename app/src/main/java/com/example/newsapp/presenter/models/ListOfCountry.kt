@@ -7,6 +7,8 @@ interface ListOfCountry {
     fun getList(): Array<String>
 
     fun getCodeOfCountry(country: String): String
+
+    fun getNameOfCountry(code: String): String
 }
 
 class ListOfCountryImpl() : ListOfCountry {
@@ -28,5 +30,7 @@ class ListOfCountryImpl() : ListOfCountry {
     override fun getList() = listOfCountry
 
     override fun getCodeOfCountry(country: String) = codeOfCountry[listOfCountry.indexOf(country)]
+
+    override fun getNameOfCountry(code: String) = listOfCountry[codeOfCountry.indexOf(code)]
 
 }

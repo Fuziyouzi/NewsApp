@@ -19,11 +19,11 @@ class TopicsViewModel @Inject constructor(
 
     fun showList() = handleNewsRequest.showList()
 
-    fun getNewsByTopic(topic: String) = handleNewsRequest.handle(viewModelScope){
+    fun getNewsByTopic(topic: String) = handleNewsRequest.handleNews(viewModelScope){
         useCase.getNewsByTopic(topic)
     }
 
-    fun getNewsByCountry(country: String) = handleNewsRequest.handle(viewModelScope){
+    fun getNewsByCountry(country: String) = handleNewsRequest.handleNews(viewModelScope){
         useCase.getNewsByCountry(country)
     }
 

@@ -13,7 +13,7 @@ class HandleRequestImpl @Inject constructor(
     private val handleError: HandleError<String>
 ) : HandleRequest {
 
-        override suspend fun handle(block: suspend () -> List<NewsModel>): NewsResult<List<NewsModel>, String> =
+        override suspend fun handle(block: suspend () -> List<NewsModel>) =
         try {
             NewsResult.Success(block.invoke())
         } catch (e: Exception) {

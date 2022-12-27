@@ -9,4 +9,5 @@ interface NewsRepository {
    suspend fun getNewsByCountry(nameCountry: String ): List<NewsModel>
 
    suspend fun getNewsByTopics(topic: String): List<NewsModel>
+
 }

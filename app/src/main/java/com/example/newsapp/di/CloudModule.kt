@@ -7,6 +7,8 @@ import com.example.newsapp.data.cloud.HandleDataRequestImpl
 import com.example.newsapp.data.cloud.NewsService
 import com.example.newsapp.data.core.ErrorDataHandler
 import com.example.newsapp.data.core.ErrorDataHandlerImpl
+import com.example.newsapp.data.storage.RoomRepositoryImpl
+import com.example.newsapp.domain.RoomRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -71,7 +73,8 @@ object CloudModule {
     @Singleton
     fun providesRepository(
         newsService: NewsService,
-        handelDataRequest: HandelDataRequest
+        handelDataRequest: HandelDataRequest,
+        roomRepositoryImpl: RoomRepository
     ) = CloudRepository(newsService, handelDataRequest)
 
 

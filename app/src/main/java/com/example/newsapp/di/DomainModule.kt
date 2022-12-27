@@ -4,10 +4,7 @@ import com.example.newsapp.core.ManageResources
 import com.example.newsapp.core.ManageResourcesImpl
 import com.example.newsapp.data.cloud.CloudRepository
 import com.example.newsapp.domain.*
-import com.example.newsapp.domain.usecases.TopStoriesUseCase
-import com.example.newsapp.domain.usecases.TopStoriesUseCaseImpl
-import com.example.newsapp.domain.usecases.TopicsUseCase
-import com.example.newsapp.domain.usecases.TopicsUseCaseImpl
+import com.example.newsapp.domain.usecases.*
 import com.example.newsapp.presenter.base.*
 import dagger.Binds
 import dagger.Module
@@ -41,6 +38,16 @@ interface DomainModule {
 
     @Binds
     fun bindsImageLoader(imageLoaderImpl: ImageLoaderImpl): ImageLoader
+
+    @Binds
+    fun bindsHandelUserRequest(handleUserRequestImpl: HandleUserRequestImpl): HandleUserRequest
+
+    @Binds
+    fun bindsHandleSuccess(handleSuccessImpl: HandleSuccessImpl): HandleSuccess<String>
+
+    @Binds
+    fun bindsUserCase(userUseCaseImpl: UserUseCaseImpl): UserUseCase
+
 
 
 

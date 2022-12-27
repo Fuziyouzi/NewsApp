@@ -37,4 +37,6 @@
     <string name="choose_country">Choose your country</string>
     <string name="ok">OK</string>
     <string name="cancel">CANCEL</string>
+    <string name="success">Success</string>
+    <string name="done">Done</string>
 </resources>

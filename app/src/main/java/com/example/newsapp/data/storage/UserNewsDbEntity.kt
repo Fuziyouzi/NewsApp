@@ -2,7 +2,11 @@ package com.example.newsapp.data.storage
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverter
+import com.example.newsapp.domain.models.NewsModel
 import com.example.newsapp.domain.models.UserNews
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 
 @Entity(
@@ -11,14 +15,13 @@ import com.example.newsapp.domain.models.UserNews
 data class UserNewsDbEntity(
    @PrimaryKey(autoGenerate = true) val id: Long,
     val country: String
+
 ){
 
-    fun toUser(): UserNews = UserNews(country = country)
-
     companion object{
-        fun createUser(createUser: CreateUser): UserNewsDbEntity = UserNewsDbEntity(
+        fun createUser(): UserNewsDbEntity = UserNewsDbEntity(
             id = 0,
-            country = createUser.country
+            country = "no_country"
         )
     }
 }

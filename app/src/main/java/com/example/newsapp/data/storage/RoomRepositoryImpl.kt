@@ -1,6 +1,6 @@
 package com.example.newsapp.data.storage
 
-import android.database.sqlite.SQLiteException
+
 import com.example.newsapp.core.Dispatcher
 import com.example.newsapp.data.core.handleStorageRequest
 import com.example.newsapp.data.storage.settings.AppSettings
@@ -14,19 +14,28 @@ class RoomRepositoryImpl @Inject constructor(
 ) : RoomRepository {
 
 
-    override suspend fun createUser(createUser: CreateUser) = handleStorageRequest(dispatcher.io) {
-        if (settings.getCurrentUserId() == AppSettings.NO_USER_ID) {
-            val entity = UserNewsDbEntity.createUser(createUser)
+    private suspend fun createUser() = handleStorageRequest(dispatcher.io) {
+            val entity = UserNewsDbEntity.createUser()
             userDao.createUser(entity)
-            settings.setUserId(0L)
+            settings.setUserId(1L)
+    }
+
+    override suspend fun getUserCountry() = handleStorageRequest(dispatcher.io){
+        if (isAlreadyExist()){
+            userDao.getUserCountry().country
+        } else {
+            createUser()
+            return@handleStorageRequest "Create"
         }
     }
 
-    override suspend fun getUserCountry() = userDao.getUserCountry().country
-
-    override suspend fun updateUserCountry(country: String) {
+    override suspend fun updateUserCountry(country: String) = handleStorageRequest(dispatcher.io) {
         userDao.updateUserCountry(
             UserTuple(settings.getCurrentUserId(), country)
         )
+    }
+
+    override suspend fun isAlreadyExist() = handleStorageRequest(dispatcher.io){
+        return@handleStorageRequest settings.getCurrentUserId() != AppSettings.NO_USER_ID
     }
 }
