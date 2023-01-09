@@ -34,4 +34,11 @@
     <string name="ok">OK</string>
     <string name="cancel">CANCEL</string>
     <string name="success">Success</string>
+    <string name="top_stories">Top Stories</string>
+    <string name="popular">Popular</string>
+    <string name="my_news">My News</string>
+    <string name="favorite">Favorite</string>
+    <string name="no_saved_news_add_news_in_favorite_to_display_them_here">No saved news</string>
+    <string name="add_some_news_to_favorite_and_they_show_up_here">Add some news to favorite and they show up here</string>
+    <string name="delete_all_saved_news">Delete all saved news</string>
 </resources>

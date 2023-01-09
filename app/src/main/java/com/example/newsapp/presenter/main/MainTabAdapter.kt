@@ -7,12 +7,11 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.newsapp.presenter.tabs.MyNewsFragment
 import com.example.newsapp.presenter.tabs.PopularFragment
 import com.example.newsapp.presenter.tabs.TopStoriesFragment
-import com.example.newsapp.presenter.tabs.VideoFragment
+import com.example.newsapp.presenter.tabs.FavoriteNewsFragment
 
 class MainTabAdapter(
-    fm: FragmentManager,
-    lifeCycle: Lifecycle
-) : FragmentStateAdapter(fm, lifeCycle) {
+    fragment: Fragment
+) : FragmentStateAdapter(fragment) {
 
     override fun getItemCount(): Int = 4
 
@@ -21,8 +20,8 @@ class MainTabAdapter(
             0 -> TopStoriesFragment()
             1 -> PopularFragment()
             2 -> MyNewsFragment()
-            3 -> VideoFragment()
-            else -> TopStoriesFragment()
+            3 -> FavoriteNewsFragment()
+            else -> throw IllegalStateException()
         }
 
     }

@@ -26,22 +26,23 @@ class TopStoriesFragment : BaseFragment<TopStoriesFragmentBinding>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = NewsListAdapter(object: NewsListAdapter.Listener {
+        val adapter = NewsListAdapter(object : NewsListAdapter.Listener {
             override fun news(news: NewsModel) {
                 val bundle = bundleOf(NewsFragment.ARG_NEWS to news.map())
                 findNavController().navigate(R.id.action_mainFragment_to_newsPageFragment, bundle)
 
             }
+
             override fun region(news: NewsModel) {
-                Snackbar.make(view, "Done", Snackbar.LENGTH_LONG ).show()
+                snackBar(view, "Done")
             }
         })
-
-        vm.showError().observeEvent(viewLifecycleOwner){
-            Snackbar.make(view, it, Snackbar.LENGTH_LONG).show()
+        vm.getNews()
+        vm.showError().observeEvent(viewLifecycleOwner) {
+            snackBar(view, it)
         }
 
-        vm.showList().observeEvent(viewLifecycleOwner){
+        vm.showList().observeEvent(viewLifecycleOwner) {
             adapter.update(it)
         }
 

@@ -14,7 +14,6 @@ class MyNewsViewModel @Inject constructor(
     private val user: UserUseCase
 ): ViewModel() {
 
-    fun showLoad() = handleNewsRequest.loading()
 
     fun showError() = handleNewsRequest.showError()
 

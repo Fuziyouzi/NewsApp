@@ -25,7 +25,7 @@ class NewsFragment : BaseFragment<NewsFragmentBinding>(
         super.onViewCreated(view, savedInstanceState)
 
         bin.toolbarPageNews.setNavigationOnClickListener {
-            findNavController().navigate(R.id.mainFragment)
+            findNavController().popBackStack()
         }
         val news = requireArguments().getStringArray(ARG_NEWS)
 

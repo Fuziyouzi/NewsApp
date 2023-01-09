@@ -17,10 +17,23 @@
             app:popUpTo="@id/mainFragment" />
         <action
             android:id="@+id/action_mainFragment_to_newsPageFragment"
-            app:destination="@id/newsPageFragment" />
+            app:destination="@id/newsPageFragment"
+            app:popUpTo="@id/mainFragment" />
         <action
             android:id="@+id/action_mainFragment_to_settingsFragment"
             app:destination="@id/settingsFragment"
+            app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_privacySettingsFragment"
+            app:destination="@id/privacySettingsFragment"
+            app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_helpFragment"
+            app:destination="@id/helpFragment"
+            app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_contactUs2"
+            app:destination="@id/contactUs2"
             app:popUpTo="@id/mainFragment" />
     </fragment>
     <fragment
@@ -47,4 +60,28 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.newsapp.presenter.menu.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/myNewsFragment"
+        android:name="com.example.newsapp.presenter.tabs.MyNewsFragment"
+        android:label="MyNewsFragment" />
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.example.newsapp.presenter.tabs.PopularFragment"
+        android:label="PopularFragment" />
+    <fragment
+        android:id="@+id/favoriteNewsFragment"
+        android:name="com.example.newsapp.presenter.tabs.FavoriteNewsFragment"
+        android:label="FavoriteNewsFragment" />
+    <fragment
+        android:id="@+id/privacySettingsFragment"
+        android:name="com.example.newsapp.presenter.menu.PrivacySettingsFragment"
+        android:label="PrivacySettingsFragment" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.newsapp.presenter.menu.HelpFragment"
+        android:label="HelpFragment" />
+    <fragment
+        android:id="@+id/contactUs2"
+        android:name="com.example.newsapp.presenter.menu.ContactUs"
+        android:label="ContactUs" />
 </navigation>

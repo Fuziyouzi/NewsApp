@@ -26,7 +26,5 @@ class TopStoriesViewModel @Inject constructor(
     }
 
 
-    init {
-        getNews()
-    }
+
 }

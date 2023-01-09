@@ -1,7 +1,9 @@
 package com.example.newsapp.presenter.tabs
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -38,7 +40,7 @@ class MyNewsFragment : BaseFragment<MyNewsFragmetBinding>(
             }
 
             override fun region(news: NewsModel) {
-                Snackbar.make(view, "Done", Snackbar.LENGTH_LONG).show()
+                snackBar(view, "Done")
             }
 
         })
@@ -51,13 +53,16 @@ class MyNewsFragment : BaseFragment<MyNewsFragmetBinding>(
         bin.listNews.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        vm.showError().observeEvent(viewLifecycleOwner){
-            Snackbar.make(view, it, Snackbar.LENGTH_LONG).show()
+        vm.showError().observeEvent(viewLifecycleOwner) {
+            snackBar(view, it)
         }
-        vm.showSuccess().observeEvent(viewLifecycleOwner){
-            if (it != "no_country"){
+        vm.showSuccess().observeEvent(viewLifecycleOwner) {
+            if (it != "no_country") {
                 vm.getUserNews()
-            }else{
+                if (bin.userCountry.text == "") {
+                    bin.userCountry.text = listOfCountry.getNameOfCountry(it)
+                }
+            } else {
                 bin.userCountry.visibility = View.GONE
                 bin.editCountry.visibility = View.GONE
                 bin.listNews.visibility = View.GONE
